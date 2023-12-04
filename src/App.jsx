@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="dark:bg-root_bluish overflow-hidden h-screen w-screen">
       <p
-        className={`text-rose-500 font-bold absolute top-5 left-1/2 -translate-x-1/2 z-[100]   bg-white  p-5 text-justify ${
+        className={`hidden text-rose-500 font-bold absolute top-5 left-1/2 -translate-x-1/2 z-[100]   bg-white  p-5 text-justify ${
           !show && "hidden"
         }`}
       >

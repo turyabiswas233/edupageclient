@@ -60,6 +60,7 @@ function UpdateForm({ showMe, toggleUpdate, allData }) {
                     id={"long-desc"}
                     title={"Long description"}
                     box={"textarea"}
+                    required={false}
                     placeHolder={"50 - 60 words"}
                     value={courseDetails.longdesc}
                     handleChange={(e) =>

@@ -2,7 +2,7 @@ import React from "react";
 import Coursecard from "./courseCart";
 import VdoUpload from "./vdoCourse";
 import Video from "./videos/video";
-import ExamLinks from "./exams/Exam";
+import Exams from "./exams/exams";
 import ZoomLink from "./live/LivePage";
 function AllCourse() {
   return (
@@ -15,10 +15,7 @@ function AllCourse() {
         {/* zoom live links */}
         <ZoomLink />
       </div>
-      <div className="flex flex-col">
-        {/* exam links */}
-        <ExamLinks />
-      </div>
+
       <div className="flex flex-wrap gap-1 justify-center">
         {/* record video */}
         <Video />
@@ -50,21 +47,21 @@ const courseList = [
     img: "/avatar.jpg",
     shortDesc:
       "Dolor voluptua clita sit takimata sanctus. Invidunt elitr diam ipsum stet sit justo, stet nonumy nonumy ea sanctus clita accusam.",
-    cPrice: "2,000 tk",
+    cPrice: 2000,
   },
   {
     title: "Flutter Dev course",
     img: "/avatar.jpg",
     shortDesc:
       "Dolor voluptua clita sit takimata sanctus. Invidunt elitr diam ipsum stet sit justo, stet nonumy nonumy ea sanctus clita accusam.",
-    cPrice: "1,51,861 tk",
+    cPrice: 151861,
   },
   {
     title: "Python Django course",
     img: "/avatar.jpg",
     shortDesc:
       "Dolor voluptua clita sit takimata sanctus. Invidunt elitr diam ipsum stet sit justo, stet nonumy nonumy ea sanctus clita accusam.",
-    cPrice: "1,861 tk",
+    cPrice: 1861,
   },
 ];
 export default AllCourse;

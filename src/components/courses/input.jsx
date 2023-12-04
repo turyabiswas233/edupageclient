@@ -9,6 +9,7 @@ function FormInput({
   id,
   type,
   box,
+  required,
 }) {
   return (
     <div className={`w-full px-3 ${extraclass}`}>
@@ -27,7 +28,7 @@ function FormInput({
           type="textarea"
           aria-rowcount={4}
           placeholder={placeHolder}
-          required
+          required={required ? required : false}
           onChange={handleChange}
         ></textarea>
       ) : (
@@ -37,7 +38,7 @@ function FormInput({
           value={value}
           type={type}
           placeholder={placeHolder}
-          required
+          required={required ? required : false}
           onChange={handleChange}
         />
       )}

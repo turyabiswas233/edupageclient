@@ -49,10 +49,7 @@ function FileInput({ value, change, extraClass }) {
     <div
       className={`upload mb-6 mx-3 outline-2 bg-purple-50 dark:bg-purple-900/30 outline-dotted outline-purple-600 p-3 rounded-lg transition-colors ${extraClass}`}
     >
-      <p
-        className="mt-1  text-gray-500 dark:text-gray-300 font-bold text-xl"
-        id="user_avatar_help"
-      >
+      <p className="mt-1  text-gray-500 dark:text-gray-300 font-bold text-xl">
         Please upload a picture for your course banner
       </p>
       <label
@@ -72,7 +69,13 @@ function FileInput({ value, change, extraClass }) {
             alt="image file"
           />
           <p className="text-violet-700 font-bold dark:text-violet-200 rounded-md uppercase">
-            SIZE: {(value?.size / 1024 / 1024).toFixed(3)} MB
+            SIZE:{" "}
+            {(
+              value?.size /
+              1024 /
+              (value?.size > 1024 * 1024 ? 1024 : 1)
+            ).toFixed(2)}{" "}
+            {value?.size > 1024 * 1024 ? "MB" : "KB"}
           </p>
         </div>
       )}

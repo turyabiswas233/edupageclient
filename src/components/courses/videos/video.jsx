@@ -6,7 +6,7 @@ function Video() {
           className="w-full rounded-xl h-auto aspect-video"
           width={1600 / 50}
           height={900 / 50}
-          src="https://www.youtube.com/embed/pJnxSw2bPg8"
+          src="https://www.youtube.com/embed/OXuskB_9uaw?si=CP0aXNtnCxgpTfgv"
           title="new south indian movies dubbed in hindi 2023 full New Movie| South Movie 2023 Chandramukhi 2"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;"

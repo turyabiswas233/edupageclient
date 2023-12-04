@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import UpdateForm from "./UpdaetPage";
-const Coursecard = ({ title, short, imagefile, cPrice, allData }) => {
+const Coursecard = ({ allData }) => {
   const [showUpdate, setUpdate] = useState(false);
 
   return (
@@ -34,7 +34,7 @@ const Coursecard = ({ title, short, imagefile, cPrice, allData }) => {
 
           <div className="flex flex-col justify-between">
             <span className="text-2xl font-bold uppercase text-white m-0 text-left mt-4">
-              {allData?.cPrice || "2000 tk"}
+              {allData?.cPrice || 2000} Tk
             </span>
             <div className="flex justify-between items-center w-full mt-4">
               <button

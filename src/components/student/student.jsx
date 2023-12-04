@@ -29,17 +29,25 @@ function Stundet() {
           <SelectBox />
         </div>
         {/* sutdent lists */}
-        <div className=" overflow-y-scroll flex-auto relative">
-          <table className="w-full dark:bg-slate-300 text-Text rounded-lg shadow-md cursor-default select-text overflow-hidden">
-            <thead>
-              <tr className="text-Text text-lg text-left ">
-                <th className="py-2 px-4 bg-gray-100 text-center">Sl No.</th>
-                <th className="py-2 px-10 bg-gray-100">Name</th>
-                <th className="py-2 px-10 bg-gray-100">Email</th>
-                <th className="py-2 px-10 bg-gray-100">Phone</th>
+        <div className="flex justify-center flex-auto overflow-y-scroll max-w-6xl w-full mx-auto border border-root_bluish">
+          <table className="w-full dark:bg-slate-300 text-Text shadow-md cursor-default select-text">
+            <thead className="w-full">
+              <tr className="text-Text text-lg text-left">
+                <th className="sticky top-0 left-0  shadow-root_bluish/20 shadow-lg  py-2 px-4 bg-gray-100 text-center">
+                  Sl No.
+                </th>
+                <th className="sticky top-0 left-0  shadow-root_bluish/20 shadow-lg  py-2 px-10 bg-gray-100">
+                  Name
+                </th>
+                <th className="sticky top-0 left-0  shadow-root_bluish/20 shadow-lg  py-2 px-10 bg-gray-100">
+                  Email
+                </th>
+                <th className="sticky top-0 left-0  shadow-root_bluish/20 shadow-lg  py-2 px-10 bg-gray-100">
+                  Phone
+                </th>
               </tr>
             </thead>
-            <tbody className="overflow-y-scroll h-64">
+            <tbody className="overflow-y-scroll h-64 ">
               {studentData
                 .filter((val) => val.phone.includes(phone))
                 .map((student, id) => {
@@ -76,7 +84,7 @@ const StudentList = ({ id, avatar, name, email, phone }) => {
       }`}
     >
       <td className="py-2">{id + 1}</td>
-      <td className="py-2 text-center  flex gap-0 items-center justify-start font-semibold w-fit">
+      <td className="py-2 text-center flex items-center gap-0 font-semibold my-auto">
         {avatar && (
           <img
             className="w-10 h-10 rounded-full object-cover select-none"
@@ -86,7 +94,7 @@ const StudentList = ({ id, avatar, name, email, phone }) => {
             height={100}
           />
         )}
-        <p className="text-left pl-5 w-fit">{name}</p>
+        <p className="text-left pl-2">{name}</p>
       </td>
       <td className="py-2 text-left">{email}</td>
       <td className="py-2 text-left">{phone}</td>
